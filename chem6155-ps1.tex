@@ -1,5 +1,6 @@
 \documentclass{chem6155problemset}
 \usepackage{chemfig}
+\usepackage{enumitem}
 
 \title{CHEM6155 -- Problem Set 1\\Math Foundations, Isotopes, Mathematica}
 \date{DUE: FRIDAY of Week 3}
@@ -42,18 +43,70 @@ available online.
 			\item $f(x) = \dfrac{x^3-4x^2-11x+30}{x^3-6}$
 		\end{itemize}
 		
-	\item Plot the above functions using \emph{Mathematica}. Indicate roots, stationary points
-	and poles in the plots.
+	\item Plot the above functions using \emph{Mathematica}. Indicate the approximate 
+	positions of roots, stationary points and poles in the plots.
+	
+	\item Find the exact locations of the stationary points in these functions. 
+	Try to verify your answers using \emph{Mathematica}. You may need to use
+	the derivative function \verb@D[f[x],x]@ and the equation solver \verb@Solve[f[x]==0,x]@
 	 
+	 
+	\item Evaluate the following definite integrals (show your working):
+	 \begin{itemize}
+	 	\item $\displaystyle\int\limits_0^{\pi^2} \frac{\sin(\sqrt{x}+\pi)}{\sqrt{x}}\,\mathrm{d}x$
+		\item $\displaystyle\int\limits_0^\infty x e^{-x^2}\,\mathrm{d}x$
+	 \end{itemize}
+	 
+	 \item Plot the above integrands with \emph{Mathematica}, and verify your integration
+	 results by using \newline \verb@Integrate[f[x],{x,a,b}]@.
+	 
+	 \item Two functions $f(x)$ and $g(x)$ are inverses of each other, in the sense that
+	 $f(g(x))=x$. Show that 
+	 \[ g'(x) = [f'(g(x))]^{-1}. \]
+	 
+	 \item Show that $\displaystyle\frac{\mathrm{d}}{\mathrm d x} \tan x = 1+\tan^2 x.$
+	 
+	 \item Show that $\displaystyle\frac{\mathrm{d}}{\mathrm d x} \arctan x = \frac{1}{1+x^2}$.
+	 
+	 \item In NMR spectroscopy, resonance lines often take the shape of the Lorentzian function
+	 \[\displaystyle g(\omega) = \frac{1}{\pi} \frac{T}{1+T^2(\omega-\omega_0)^2}\]
+	 \begin{itemize}
+	  \item Plot this function for various choices of the parameters $T$ and $\omega_0$. What
+	 	role do these parameters play? 
+	  \item Find the integral $\int_{-\infty}^\infty\,g(\omega)\,\mathrm{d}\omega$ as a 
+	  function of the parameters $\omega_0$ and $T$. Comment on your finding.
+	  \end{itemize}
 \end{enumerate}
 
 \paragraph{1.2 Algebraic Equations and Complex Numbers}
 
+\begin{enumerate}[resume]
+	\item Provide brief explanations for the following terms and expressions ($z$ is a complex number)
+	\begin{itemize}
+		\item complex conjugate, $z^\ast$
+		\item modulus, $|z|$
+		\item argument, $\arg z$
+	\end{itemize}
+	
+	\item find all complex solutions to the following equations:
+	\begin{itemize}
+	 	\item $z^5 + 1 = 0$
+		\item $z^3+2z^2+3z = 0$
+		\item $\cos\frac{2\pi z}{L} + \frac{i}{2} =0$
+	\end{itemize}
+\end{enumerate}
+
 \paragraph{1.3 Vectors and Vector Fields}
+\begin{enumerate}[resume]
+  \item The two vectors $\mathbf{a}=(1,-2,0)^T$ and $\mathbf{b}=(2,1,-1)^T$ span 
+    plane a $P$ in 3D space, which contains the point $(1,0,0)$. Find
+    the equation that describes the plane in the form $Ax+By+Cz+D=0$, i.e., determine
+    the coefficients $A,B,C$, and $D$. 
+\end{enumerate}
 
 \paragraph{1.4 Matrices and Eigenvalue Problems}
 
-\section{Isotopes and Natural Abundances}
+\section{Isotopes and Larmor Precession}
 \paragraph{Isotopomers of Ethanol}
 	Ethanol (\chemfig{CH_3CH_2OH}) consists of the elements carbon, oxygen, and hydrogen.
 	\begin{enumerate}
